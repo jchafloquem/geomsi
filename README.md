@@ -1,10 +1,24 @@
-# 3GeoMSI
+# GeoVisor | MSI
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.1.
+Este proyecto es una aplicación de visualización geográfica desarrollada con **Angular** y estilizada con **Tailwind CSS**.
 
-## Development server
+## 🛠️ Tecnologías
 
-To start a local development server, run:
+*   **Framework:** Angular (CLI v21.0.1)
+*   **Estilos:** Tailwind CSS (Configuración personalizada)
+*   **Test Runner:** Vitest
+
+## 📦 Instalación
+
+Para instalar las dependencias del proyecto, ejecuta:
+
+```bash
+npm install
+```
+
+## 🚀 Servidor de Desarrollo
+
+Para iniciar el servidor de desarrollo local, ejecuta:
 
 ```bash
 ng serve
