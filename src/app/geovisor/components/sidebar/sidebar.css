@@ -1,0 +1,37 @@
+/*
+ * :host se refiere al propio elemento <app-sidebar>.
+ * Al aplicarle `overflow: hidden`, forzamos a que cualquier contenido interno
+ * que se desborde (como el panel del menú) sea recortado.
+ * Esto resuelve de raíz el problema de expansión del ancho de página en Safari,
+ * sin afectar la animación de deslizamiento.
+*/
+:host {
+  overflow: hidden;
+}
+/*
+ * Estilos para el panel del menú lateral.
+ * Se mantiene la animación de deslizamiento que te gusta, pero se elimina el código duplicado y no utilizado.
+*/
+/* === Panel de menú (contenedor principal) === */
+.menu__container {
+  /*
+   * Usamos `transform` para la animación en lugar de `left`. Es mucho más eficiente
+   * y evita que el navegador recalcule el ancho de la página.
+   * La posición base `left: 48px` la define Tailwind en el HTML.
+  */
+  transition: transform 0.5s ease;
+
+  /*
+   * Por defecto (cerrado), movemos el panel fuera de la vista hacia la izquierda.
+   * El ancho del panel es 272px, así que lo movemos esa cantidad.
+  */
+  transform: translateX(-272px);
+  border-radius: 0 8px 8px 0;
+}
+
+/* === Panel visible (abierto) === */
+/* Cuando se añade la clase .menu__container--open, se mueve a su posición visible. */
+.menu__container--open {
+  /* Lo devolvemos a su posición original (transformación cero). */
+  transform: translateX(0);
+}

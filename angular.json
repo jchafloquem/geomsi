@@ -25,6 +25,7 @@
               }
             ],
             "styles": [
+              "src/themes/theme.scss",
               "src/styles.css"
             ]
           },

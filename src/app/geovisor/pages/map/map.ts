@@ -2,11 +2,13 @@ import { Component, AfterViewInit, ViewChild, ElementRef, inject } from '@angula
 import { MapService } from '../../services/geovisor.service';
 
 import { Navbar } from './../../components/navbar/navbar';
+import { Sidebar } from '../../components/sidebar/sidebar';
 
 @Component({
   selector: 'app-map',
   imports: [
-    Navbar
+    Navbar,
+    Sidebar
   ],
   templateUrl: './map.html',
   styleUrl: './map.css',
